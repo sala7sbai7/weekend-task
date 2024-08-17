@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(247, 247, 247);
+}
+.contactLogo { width: 100px; height: 40px;
+    margin-top: 5px;
+}
+.foodiLogo{
+    width: 100px; height: 40px;
+    margin-top: -10px;
+}
+.header {
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 40px;
+    /* background-color: rgb(92, 113, 113); */
+    /* border: 1px black solid; */
+    height: 50px;
+}
+.nav1 {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    margin-top: 15px;
+}
+.home {
+    color: greenyellow;
+}
+.nav2   {
+    display: flex;
+    float: right;
+    gap: 2rem;
+    position: relative;
+    margin-right: 5px;
+}
+.secondHalf {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.leftSection {
+    /* background-color: blanchedalmond; */
+    width: 600px;
+    height: 800px;
+    text-align: center;
+    position: absolute;
+    margin-top: 200px;
+    
+
+}
+
+/* .rightSection {
+    background-color: aquamarine;
+    width: 600px;
+    height: 800px;
+    float: right;
+    margin-right: 0px;
+    
+} */
+
+.h2-1 {
+    font-size: 3rem;
+    margin-top: 0px;
+    
+}
+.yummy {
+    width: 600px;
+    height: 600px;
+    float: right;
+}
+.order {
+    width: 300px;
+}
+.screenShot {
+    margin-left: 70px;
+    
+    /* background-color: blue; */
+    width: 1300px;
+    
+    
+}
+/* .screenShot {
+    margin-top: 600px;
+    margin-left: 70px;
+} */
