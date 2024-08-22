@@ -1,0 +1,205 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Frame Styling */
+.frame1, .frame2, .frame3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.frame1 {
+    background: #000;
+}
+
+.frame2 {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.frame3 {
+    background: #d0d0d0;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navBar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent black background */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navBar .teslaLogo {
+    width: 150px;
+    height: auto;
+}
+
+.navBar .links {
+    display: flex;
+    gap: 2rem; /* Separate the buttons */
+}
+
+.navBar .links a {
+    position: relative;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navBar .links a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Pseudo-hover effect */
+.navBar .links a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Position the box just below the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0; /* Start with no width */
+    height: 5px;
+    background-color: #e14e4e;
+    border-radius: 2px;
+    transition: width 0.3s ease-in-out; /* Smooth transition for width */
+}
+
+.navBar .links a:hover::after {
+    width: 100%; /* Expand the width on hover */
+}
+
+.navBar .icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.navBar .icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    transition: fill 0.3s;
+}
+
+.navBar .icon:hover {
+    fill: #ccc;
+}
+
+/* Price Tag */
+.priceTag {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.priceTagh1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.priceTagp1 {
+    font-size: 1.2rem;
+    color: #e14e4e;
+    text-decoration: none;
+}
+
+.priceTagp2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Images */
+.img3, .imgy, .imgx {
+    width: 100%;
+    height: auto;
+}
+
+/* Button Group */
+.buttonGroup {
+    display: flex;
+    gap: 1rem;
+}
+
+.buttonGroup .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buttonGroup .orderNow {
+    background: #e14e4e;
+}
+
+.buttonGroup .demoDrive {
+    background: #333;
+}
+
+.buttonGroup .btn:hover {
+    background-color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar .links {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .priceTagh1 {
+        font-size: 2rem;
+    }
+
+    .priceTagp1 {
+        font-size: 1rem;
+    }
+
+    .priceTagp2 {
+        font-size: 1.2rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
