@@ -1,0 +1,177 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Frame 1, Frame 2, and Frame 3 */
+.frame1, .frame2, .frame3 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+}
+
+.frame1 {
+    background: #000;
+}
+
+.frame2 {
+    background: #f0f0f0;
+}
+
+.frame3 {
+    background: #d0d0d0;
+}
+
+/* Navigation Bar */
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: transparent;
+}
+
+.navBar .teslaLogo {
+    width: 100px;
+}
+
+.navBar .links {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.navBar .help, .navBar .globe, .navBar .person {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    margin-left: 1rem;
+}
+
+/* Price Tag */
+.priceTag {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.priceTagh1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.priceTagp1 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.priceTagp2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Images */
+.img3, .imgy, .imgx {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Button Group */
+.buttonGroup {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.buttonGroup .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.buttonGroup .orderNow {
+    background: #3f5bc8;
+}
+
+.buttonGroup .demoDrive {
+    background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navBar .links {
+        margin: 0.5rem 0;
+    }
+
+    .priceTagh1 {
+        font-size: 2rem;
+    }
+
+    .priceTagp1 {
+        font-size: 1rem;
+    }
+
+    .priceTagp2 {
+        font-size: 1.2rem;
+    }
+
+    .buttonGroup {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+/* Styling for the hover effect on navbar links */
+.navBar .links:hover::after {
+    content: "";
+    position: fixed; /* Use fixed positioning to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100vw; /* 100% of the viewport width */
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
+    z-index: -1;
+    transition: height 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* When hovered, the box will expand to the middle of the screen */
+.navBar .links:hover::after {
+    height: 50vh; /* Expands to 50% of the viewport height */
+}
+
+/* Additional styling to ensure links are above the hover effect box */
+.navBar {
+    position: relative;
+}
+
+.navBar .links {
+    position: relative;
+    z-index: 1; /* Ensures links are above the hover effect box */
+}
